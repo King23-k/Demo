@@ -25,7 +25,7 @@ body {
     "header header header"
     "sidebar-left main sidebar-right"
     "footer footer footer";
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
@@ -33,6 +33,7 @@ h1 {
   font-family: Papyrus, fantasy;
   color: #005c32;
   text-align: center;
+  font-size:60px;
 }
 
 h2 {
