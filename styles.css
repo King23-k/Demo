@@ -4,7 +4,7 @@
 @keyframes example3 {
   0%   {color:#005c32;}
   50%  {color:#fb8835;}
-  
+  100%   {color:#005c32;}
 }
 
 
