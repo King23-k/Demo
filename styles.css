@@ -2,11 +2,9 @@
   animation-duration: 5s;
   animation-iteration-count: infinite;}
 @keyframes example3 {
-  0%   {color:red;}
-  25%  {color:yellow;}
-  50%  {color:blue;}
-  75%  {color:purple;}
-  100% {color:red;}
+  0%   {color:#005c32;}
+  50%  {color:#fb8835;}
+  
 }
 
 
