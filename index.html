@@ -1,13 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Monaco, monospace;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #e0ffe0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: Papyrus, fantasy;
+      color: #005c32;
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    h2 {
+      color: #009550;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+      display: none;
+    }
+
+    main {
+      grid-area: main;
+      padding: 1rem;
+    }
+
+    .gallery {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      flex: 1 1 300px;
+    }
+
+    #imp {
+      animation-name: colorPulse;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes colorPulse {
+      0% { color: #005c32; }
+      50% { color: #fb8835; }
+      100% { color: #005c32; }
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #eee;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .footer-left ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-left a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        grid-template-areas:
+          "header header header"
+          "sidebar-left main sidebar-right"
+          "footer footer footer";
+        grid-template-columns: 1fr 6fr 1fr;
+      }
+
+      .sidebar-left,
+      .sidebar-right {
+        display: block;
+        padding: 1rem;
+      }
+
+      .sidebar-left {
+        grid-area: sidebar-left;
+        background-color: #f5fff0;
+        border-right: 1px solid #9fe066;
+      }
+
+      .sidebar-left ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar-left a {
+        font-size: 1.2rem;
+        color: #fb8835;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar-left a:hover {
+        color: #fa9d38;
+      }
+
+      .sidebar-left a:active {
+        color: #9a541f;
+      }
+
+      .sidebar-right {
+        grid-area: sidebar-right;
+        background-color: #f0f5e0;
+        border-left: 1px solid #9fe066;
+      }
+
+      footer {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
 </head>
 <body>
- <header>
+  <header>
     <h1>Home</h1>
   </header>
 
@@ -21,26 +168,27 @@
   </aside>
 
   <main>
-    <p>jdo9asodas dasodjasdas das d aisjnduasndas da sdiandiausd asidajdinasd asidjnaisjdna sdiasndisjad</p>
+    <p>Welcome to our website! We're dedicated to providing excellent service and care.</p>
     <h2 id="imp">Gallery</h2>
     <div class="gallery">
-      <img src="fishtank.jpg" alt="Our facility">
-      <img src="shack.jpg" alt="The historic childhood home of our 2 founders">
-      <img src="upsidedownfishtank.jpg" alt="Our relaxing pond where the goldfish can experience nature.">
+      <img src="fishtank.jpg" alt="Our facility" />
+      <img src="shack.jpg" alt="The historic childhood home of our 2 founders" />
+      <img src="upsidedownfishtank.jpg" alt="Our relaxing pond where the goldfish can experience nature." />
     </div>
   </main>
 
   <aside class="sidebar-right">
-    <h2>ads</h2>
+    <h2>Ads</h2>
     <ul>
-      <li>qqkwoq</li>
-      <li>qweqwe</li>
-      <li>qweqwe</li>
+      <li>Product 1</li>
+      <li>Service 2</li>
+      <li>Offer 3</li>
     </ul>
   </aside>
 
   <footer>
-    <div class="footer-left">Site Map
+    <div class="footer-left">
+      <strong>Site Map</strong>
       <ul>
         <li><a href="#">Treatment Options</a></li>
         <li><a href="#">Contact Information</a></li>
@@ -48,7 +196,7 @@
         <li><a href="#">History</a></li>
       </ul>
     </div>
-    <div class="footer-right">Footer</div>
+    <div class="footer-right">© 2025 Company Name</div>
   </footer>
 </body>
 </html>
